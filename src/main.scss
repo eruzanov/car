@@ -1,0 +1,66 @@
+svg path {
+    fill: currentColor;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+}
+
+@mixin seat($color) {
+    $color: $color;
+    $background: transparent;
+    $background-active: $color;
+    $color-active: black;
+    $hover-background: lighten($color, 7.5%);
+    $hover-color: white;
+
+    flex: 0 0 50px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 30ms cubic-bezier(0.55, 0, 0.55, 0.2);
+    margin: 2px;
+    padding: 5px;
+    cursor: pointer;
+    background-color: $background;
+    border: 1px solid;
+    color: $color;
+    .seat__icon {
+        margin: 0;
+        color: $color;
+    }
+
+    &.active {
+        background-color: $background-active;
+        color: $color-active;
+        .seat__icon {
+            color: $color-active;
+        }
+        &:hover {
+            background-color: $hover-background;
+            color: $color-active;
+            .seat__icon {
+                color: $color-active;
+            }
+        }
+    }
+
+    &:hover {
+        background-color: $hover-background;
+        color: $hover-color;
+        border: 1px solid;
+        .seat__icon {
+            color: $hover-color;
+        }
+    }
+}
+
+.seat {
+    @include seat(#ffc107);
+}
+
+.seat_up {
+    @include seat(#fd7e14);
+}

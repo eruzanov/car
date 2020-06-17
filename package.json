@@ -1,0 +1,30 @@
+{
+    "name": "car",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "prettier": {
+        "tabWidth": 4,
+        "singleQuote": true
+    },
+    "dependencies": {
+        "angular": "^1.8.0",
+        "angular-animate": "^1.8.0",
+        "angular-aria": "^1.8.0",
+        "angular-material": "^1.1.22",
+        "angular-messages": "^1.8.0"
+    },
+    "devDependencies": {
+        "grunt": "^1.1.0",
+        "grunt-contrib-concat": "^1.0.1",
+        "grunt-contrib-connect": "^2.1.0",
+        "grunt-contrib-sass": "^1.0.0",
+        "grunt-contrib-watch": "^1.1.0"
+    }
+}
