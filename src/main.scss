@@ -1,4 +1,28 @@
 .datepicker {
-    padding: 20px;
-    background-color: white;
+    display: flex;
+    align-items: center;
+    padding: 5px 8px;
+    border: 1px solid;
+    input {
+        box-sizing: border-box;
+        border: none;
+        box-shadow: none;
+        outline: none;
+        background: transparent;
+        min-width: 120px;
+        max-width: 328px;
+        padding: 0;
+        &:focus {
+            border: none;
+            outline: none;
+        }
+    }
+
+    md-icon {
+        cursor: pointer;
+    }
+
+    &__calendar {
+        background-color: white;
+    }
 }

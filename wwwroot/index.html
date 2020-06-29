@@ -5,21 +5,16 @@
         <link rel="stylesheet" type="text/css" href="lib.css" />
         <link rel="stylesheet" type="text/css" href="main.css" />
     </head>
-    <body ng-app="app" ng-controller="app">
-        <div class="row" ng-repeat="row in rows">
-            <div
-                ng-class="['seat', {seat_up: $index % 2}, {active: cell.active}]"
-                ng-repeat="cell in row"
-                ng-click="cell.active = !cell.active"
-            >
-                <md-icon
-                    class="seat__icon"
-                    md-svg-icon="{{cell.icon}}"
-                ></md-icon>
-                {{cell.id}}
-            </div>
+    <body
+        ng-app="app"
+        ng-controller="app"
+        layout="column"
+        layout-align="center center"
+    >
+        <div class="">
+            {{bithday | date : 'dd.MM.yyyy'}}
         </div>
-
+        <datepicker date="bithday"></datepicker>
         <script src="lib.js"></script>
         <script src="main.js"></script>
     </body>
